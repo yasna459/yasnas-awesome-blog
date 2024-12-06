@@ -9,3 +9,5 @@ My name is Yasna Ahmadi. I am a freshman at Del Norte High School. I love to bak
 
 
 ![alt text](images/download-removebg-preview.png)
+
+![alt text](image.png)
