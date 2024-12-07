@@ -1,15 +1,15 @@
-export GIT_USER_NAME="jm1021"
-export GIT_USER_EMAIL="jmort1021@gmail.com"
+export GIT_USER_NAME="yasna459"
+export GIT_USER_EMAIL="yasnarts@gmail.com"
 
 # Function to check if a line exists in run commands
 line_exists_in_rc() {
-  grep -Fxq "$1" ~/.bashrc
+  grep -Fxq "$1" ~/.zshrc
 }
 
 # Function to add line to run commands
 add_to_rc() {
   if ! line_exists_in_rc "$1"; then
-    echo "$1" >> ~/.bashrc
+    echo "$1" >> ~/.zshrc
   fi
 }
 
@@ -24,7 +24,7 @@ add_to_rc "# Ruby Gem Path"
 add_to_rc 'export GEM_HOME="$HOME/gems"'
 add_to_rc 'export PATH="$HOME/gems/bin:$PATH"'
 # Source the .bashrc file to apply changes immediately
-source ~/.bashrc
+source ~/.zshrc
 
 echo "=== Gem install starting, thinking... ==="
 gem install jekyll bundler
@@ -43,14 +43,14 @@ code --install-extension ms-toolsai.jupyter --pre-release
 code --install-extension GitHub.copilot
 
 # Verify the installation and check the Python version
-python --version
+python3 --version
 bundle --version
 
 # Create a virtual environment if it doesn't exist
 if [ -d "venv" ]; then
     rm -rf venv
 fi
-python -m venv venv
+python3 -m venv venv
 
 # Activate the virtual environment
 source ./venv/bin/activate
